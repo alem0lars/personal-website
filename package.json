@@ -1,0 +1,94 @@
+{
+  "name": "alem0lars-website",
+  "version": "0.0.1",
+  "authors": [
+    "Alessandro Molari <molari.alessandro@gmail.com>"
+  ],
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "autoprefixer-core": "~5.2.0",
+    "babel-core": "~5.6.15",
+    "babel-eslint": "~4.0.0",
+    "babelify": "~6.0.2",
+    "browser-sync": "~2.7.12",
+    "browserify": "~10.0.0",
+    "browserify-shim": "^3.8.10",
+    "del": "~1.2.0",
+    "envify": "~3.4.0",
+    "foldero": "~0.1.1",
+    "glob": "~5.0.10",
+    "gulp": "~3.9.0",
+    "gulp-changed": "~1.2.1",
+    "gulp-data": "~1.2.0",
+    "gulp-eslint": "~0.14.0",
+    "gulp-htmlmin": "~1.1.3",
+    "gulp-if": "~1.2.5",
+    "gulp-imagemin": "~2.2.1",
+    "gulp-jade": "~1.0.1",
+    "gulp-load-plugins": "~0.10.0",
+    "gulp-newer": "~0.5.1",
+    "gulp-plumber": "~1.0.1",
+    "gulp-postcss": "~5.1.8",
+    "gulp-rename": "~1.2.2",
+    "gulp-sass": "~2.0.1",
+    "gulp-sourcemaps": "~1.5.2",
+    "gulp-uglify": "~1.2.0",
+    "gulp-util": "~3.0.5",
+    "imagemin-pngquant": "~4.0.0",
+    "imagemin-svgo": "~4.0.0",
+    "jade": "~1.11.0",
+    "lodash": "~3.2.0",
+    "minimist": "~1.1.1",
+    "rimraf": "~2.2.0",
+    "vinyl-buffer": "~1.0.0",
+    "vinyl-source-stream": "~1.1.0",
+    "watchify": "~3.3.0 ",
+    "wrench": "~1.5.8"
+  },
+  "scripts": {
+    "clean-deps": "rimraf node_modules"
+  },
+  "engines": {
+    "node": ">=0.12.0"
+  },
+  "config": {
+    "host": "127.0.0.1",
+    "port": "3000",
+    "baseUrl": "/",
+    "directories": {
+      "source": "src",
+      "destination": "build",
+      "temporary": "tmp",
+      "modules": "_modules",
+      "layouts": "_layouts",
+      "images": "_images",
+      "styles": "_styles",
+      "scripts": "_scripts",
+      "data": "_data"
+    },
+    "entries": {
+      "js": "main**.js",
+      "css": "main**.{sass,scss}"
+    }
+  },
+  "dependencies": {
+    "bootstrap-sass": "^3.3.5",
+    "bootswatch": "^3.3.5",
+    "jquery": "^2.1.4",
+    "jquery-mousewheel": "^3.1.13"
+  },
+  "browser": {
+    "jquery-mousewheel": "./node_modules/jquery-mousewheel/jquery.mousewheel.js",
+    "bootstrap": "./node_modules/bootstrap-sass/assets/javascripts/bootstrap.js"
+  },
+  "browserify-shim": {
+    "jquery-mousewheel": {
+      "exports": null,
+      "depends": "jquery:$"
+    },
+    "bootstrap": {
+      "exports": null,
+      "depends": "jquery:jQuery"
+    }
+  }
+}

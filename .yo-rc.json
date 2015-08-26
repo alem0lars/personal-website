@@ -1,0 +1,12 @@
+{
+  "generator-yeogurt": {
+    "config": {
+      "projectName": "alem0lars",
+      "htmlOption": "jade",
+      "cssOption": "sass",
+      "sassSyntax": "scss",
+      "testFramework": "none"
+    },
+    "version": "1.2.6"
+  }
+}
