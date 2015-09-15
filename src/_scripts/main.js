@@ -8,14 +8,15 @@ import $ from 'jquery';
 window.jQuery = $; // Support old-style plugins using global `jQuery` object.
 window.$ = $;      // Support old-style plugins using global `$` object.
 
-import mousewheelInit from 'jquery-mousewheel';
-mousewheelInit($); // Initialize `jquery-mousewheel` plugin, applying it to `$`.
+// Use require() for plugins not supporting ES6.
+require('jquery-mousewheel');
+require('./terminal-upstream');
+require('bootstrap');
 
-require('bootstrap'); // `require` (no `import`) cuz needs global `jQuery`.
-
-import AboutMe from '../_modules/aboutme/aboutme';
+import MainConsole from '../_modules/mainconsole/mainconsole';
 
 
 $(() => {
-  new AboutMe();
+  var mainConsole = new MainConsole('.main-console');
+  mainConsole.start();
 });
